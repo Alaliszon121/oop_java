@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sprawdzian A.J.</title>
+    <script src="index.js" defer></script>
+    <style>
+        table, tr, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <select id="wybor" onchange="stanowisko()">
+            <option value="pracownik">Pracownik</option>
+            <option value="lekarz">Lekarz</option>
+            <option value="ordynator">Ordynator oddziału</option>
+        </select><br>
+        <label for="imie">Imię: </label>
+        <input type="text" id="imie"><br>
+        <label for="nazwisko">Nazwisko: </label>
+        <input type="text" id="nazwisko"><br>
+        <label for="pesel">PESEL: </label>
+        <input type="text" id="pesel"><br>
+        <label for="specjalizacja">Specjalizacja: </label>
+        <input type="text" id="specjalizacja" disabled><br>
+        <label for="oddzial">Oddział: </label>
+        <input type="text" id="oddzial" disabled><br>
+        <input type="button" value="Dodaj" onclick="dodaj()">
+    </form>
+
+    <table id="tabela">
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>PESEL</th>
+            <th>Specjalizacja</th>
+            <th>Oddział</th>
+        </tr>
+    </table>
+</body>
+</html>

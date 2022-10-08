@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="index.js"></script>
+    <title>Sprawdzian A.J.</title>
+    <style>
+      input:invalid {
+        border: 1px solid rgb(255, 98, 98);
+      }
+      table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myform">
+      <label for="a">Bok a:</label>
+      <input type="number" name="a" id="a" min="0" pattern="(?=.*[1-9]).{1}" value="1" step="any" required/><br>
+      <label for="b">Bok b:</label>
+      <input type="number" name="b" id="b" min="0" pattern="(?=.*[1-9]).{1}" value="1" step="any" required/><br>
+      <label for="h">Wysokość H:</label>
+      <input type="number" name="h" id="h" min="0" pattern="(?=.*[1-9]).{1}" value="1" step="any" required/><br>
+      <button type="button" id="submitBtn" onclick="oblicz()">Oblicz</button>
+    </form>
+
+    <table>
+      <tr>
+        <th>Objętość</th>
+        <th>Pole powierzchni</th>
+        <th>Suma krawędzi</th>
+      </tr>
+      <tr id="wyniki">
+        <td class="results"></td>
+        <td class="results"></td>
+        <td class="results"></td>
+      </tr>
+    </table>
+  </body>
+</html>
